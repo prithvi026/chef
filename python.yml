@@ -15,6 +15,6 @@ steps:
 
 - script: |
     python --version
-    echo echo "print('hello world')">hello.py
+    echo "print('hello world')">hello.py
     python3 hello.py
   displayName: 'output'
