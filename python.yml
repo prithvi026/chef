@@ -1,0 +1,20 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: sudo apt install python3.8
+  displayName: 'install python'
+
+- script: |
+    python --version
+    echo echo "print('hello world')">hello.py
+    python3 hello.py
+  displayName: 'output'
